@@ -62,15 +62,15 @@
     </div>
           <h2 class="text-white mb-4">NETFLIX MOVIE RECOMMENDER SYSTEM</h2>
 		  <h3 class="text-white mb-4">Introduction</h3>
-          <p class="text-white mb-4">Netflix is all about connecting people to the movies they love. To help customers find those movies, they developed world-class movie recommendation system: CinematchSM. Its job is to predict whether someone will enjoy a movie based on how much they liked or disliked other movies. Netflix use those predictions to make personal movie recommendations based on each customer’s unique tastes. And while Cinematch is doing pretty well, it can always be made better.</br>
-Now there are a lot of interesting alternative approaches to how Cinematch works that netflix haven’t tried. Some are described in the literature, some aren’t. We’re curious whether any of these can beat Cinematch by making better predictions. Because, frankly, if there is a much better approach it could make a big difference to our customers and our business.</p>
+          <p class="text-white mb-4">Netflix is all about connecting people to the movies they love. To help customers find those movies, they developed a world-class movie recommendation system: CinematchSM. Its job is to predict whether someone will enjoy a movie based on how much they liked or disliked other movies. Netflix uses those predictions to make personal movie recommendations based on each customer’s unique tastes. And while Cinematch is doing pretty well, it can always be made better.</br>
+Now there are a lot of interesting alternative approaches to how Cinematch works that Netflix hasn’t tried. Some are described in the literature, some aren’t. We’re curious whether any of these can beat Cinematch by making better predictions. Because, frankly, if there is a much better approach it could make a big difference to our customers and our business.</p>
 		  <h3 class="text-white mb-4">Problem Statement</h3>
 		  <p class="text-white mb-4">We Netflix provided a lot of anonymous rating data, and a prediction accuracy bar that is 10% better than what Cinematch can do on the same training data set. (Accuracy is a measurement of how closely predicted ratings of movies match subsequent actual ratings.)</p>
-		  <h6 class="text-white mb-4">Objectives<ol><li>Predict the rating that a user would give to a movie that he ahs not yet rated.</li><li>Minimize the difference between predicted and actual rating (RMSE and MAPE).</li></ol></h6>
+		  <h6 class="text-white mb-4">Objectives<ol><li>Predict the rating that a user would give to a movie that he has not yet rated.</li><li>Minimize the difference between predicted and actual rating (RMSE and MAPE).</li></ol></h6>
 		  <h6 class="text-white mb-4">Constraints:<ol><li>Some form of interpretability.</li></ol></h6>
 		  <h3 class="text-white mb-4">Type of Machine Learning Problem</h3>
 		  
-		  <p class="text-white mb-4">For a given movie and user we need to predict the rating would be given by him/her to the movie.</br>The given problem is a Recommendation problem.</br>It can also seen as a Regression problem</p>
+		  <p class="text-white mb-4">For a given movie and user we need to predict the rating would be given by him/her to the movie.</br>The given problem is a Recommendation problem.</br>It can also be seen as a Regression problem</p>
 		  <h6 class="text-white mb-4">Performance metric
 		  <ul>
 		  <li><a href="https://en.wikipedia.org/wiki/Mean_absolute_percentage_error">Mean Absolute Percentage Error:</a></li>
@@ -86,9 +86,9 @@ Now there are a lot of interesting alternative approaches to how Cinematch works
 		  </h5>
 		  <h6 class="text-white mb-4">Preprocessing<ul>
 			<li>Converting / Merging whole data to required format: u_i, m_j, r_ij</li>
-			<li>Checking for NaN values,Removing Duplicates</li>
+			<li>Checking for NaN values, Removing Duplicates</li>
 			<li>Basic Statistics (#Ratings, #Users, and #Movies)</li>
-			<li>Spliting data into Train and Test(80:20)</li>
+			<li>Splitting data into Train and Test(80:20)</li>
 			</ul>
 		  </h6>
 		  <h6 class="text-white mb-4">Exploratory Data Analysis
@@ -99,11 +99,11 @@ Now there are a lot of interesting alternative approaches to how Cinematch works
 		<div class="image-block"><img src="images/day of week.png" width="450" alt="">
 		<li>Average user rating</li>
 		<div class="image-block"><img src="images/Average user rating.png" width="450" alt="">
-		<li>Number of Ratings per a month</li>
+		<li>Number of Ratings per  month</li>
 		<div class="image-block"><img src="images/Number of Ratings per a month.png" width="450" alt="">
-		<li>Number of Ratings per a year</li>
+		<li>Number of Ratings per year</li>
 		<div class="image-block"><img src="images/Number of Ratings per a year.png" width="450" alt="">
-		<li>Analysis on the Ratings given by user</li>
+		<li>Analysis of the Ratings given by user</li>
 		<div class="image-block"><img src="images/Analysis on the Ratings given by user.png" width="450" alt="">
 		<li>Analysis of ratings of a movie given by a user</li>
 		<div class="image-block"><img src="images/Analysis of ratings of a movie given by a user.png" width="450" alt="">
@@ -114,7 +114,7 @@ Now there are a lot of interesting alternative approaches to how Cinematch works
 	    </ul>
 		  </h6>
 		  <p class="text-white mb-4"></p>
-		  <h6 class="text-white mb-4">Featurizing data
+		  <h6 class="text-white mb-4">Feature selection of data
 		   <ul>
 	  <li>GAvg : Average rating of all the ratings</li>
 	  <li>Similar users rating of this movie:sur1, sur2, sur3, sur4, sur5 ( top 5 similar users who rated that movie.. )</li>
@@ -173,14 +173,14 @@ Now there are a lot of interesting alternative approaches to how Cinematch works
 		  <p class="text-white mb-4"></p>
 		  <h6 class="text-white mb-4">Procedure
 			<ol>
-		<li>Merging movies with users and their rating in single dataframe.</li>
-		<li>Sorting the dataframe by date and removing any duplicate values.</li>
-		<li>performing Exploratory Data Analysis on it,so that we will able to visualise distribition of the ratings,avg rating of the movie or avg rating given by the users to the movie.</li>
-		<li>After that we we split our data in train and test which is in ratio of 80:20and try to to EDA on it.</li>
-		<li>Creating sparse matrix from train and test data and analysing the sparsity.</li>
+		<li>Merging movies with users and their rating in a single data frame.</li>
+		<li>Sorting the data frame by date and removing any duplicate values.</li>
+		<li>performing Exploratory Data Analysis on it, so that we will able to visualise the distribution of the ratings,avg rating of the movie or avg rating given by the users to the movie.</li>
+		<li>After that we split our data in train and test which is in ratio of 80:20and try to EDA on it.</li>
+		<li>Creating a sparse matrix from train and test data and analysing the sparsity.</li>
 		<li>Compute User-User Similarity matrix and Movie-Movie similarity matrix.</li>
 		<li>Getting sample sparse matrices from train and test data.</li>
-		<li>Featurizing the data by selecting the top 5 ratings given by similar users to a particular user and also top 5 ratings given to similar movies with respect to particular movie.</li>
+		<li>Featurizing the data by selecting the top 5 ratings given by similar users to a particular user and also top 5 ratings given to similar movies with respect to a particular movie.</li>
 		<li>work with different machine learning models and compare results.</li>
 		</ol>
 		  </h6>
