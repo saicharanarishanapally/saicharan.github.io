@@ -62,7 +62,7 @@
     </div>
           <h2 class="text-white mb-4">Newyork Taxi Demand Prediction</h2>
 		  <h3 class="text-white mb-4">Problem Statement</h3>
-		  <p class="text-white mb-4">Given a region and a particular time interval, predict the no of pickups as accurately as possible in that region and nearby regions.Based on the data, machine learning model predicts the pickup demand of cabs in 10 minutes time frame. In this python notebook different machine learning model have been trained and accuracy is tested.</p>
+		  <p class="text-white mb-4">Given a region and a particular time interval, predict the no of pickups as accurately as possible in that region and nearby regions. Based on the data, machine learning model predicts the pickup demand of cabs in 10 minutes time frame. In this python notebook different machine learning model have been trained and accuracy is tested.</p>
 		  <h3 class="text-white mb-4">Type of Machine Learning Problem</h3>
 		  
 		  <p class="text-white mb-4">The given problem is a Regression problem</p>
@@ -73,8 +73,8 @@
 		  
 		  </ul>
 		  
-		  <h6 class="text-white mb-4">Pre-processing And Data Preparation
-		   <p class="text-white mb-4">Now we break whole of NYC into clusters/segments/regions. We choose the (lat,long) of pickup as features and we apply K-Means clustering algorithm(we find the right K using GridSearch). On choosing a cluster size of 40, we find an optimal min inter-cluster distance. Finally, we assign the cluster no. to each data point</p>
+		  <h6 class="text-white mb-4">Pre-processing and Data Preparation
+		   <p class="text-white mb-4">Now we break the whole of NYC into clusters/segments/regions. We choose the (lat,long) of pickup as features and we apply K-Means clustering algorithm(we find the right K using GridSearch). On choosing a cluster size of 40, we find an optimal min inter-cluster distance. Finally, we assign the cluster no. to each data point</p>
 
 		<h6 class="text-white mb-4">Time-binning:</h6>
 		<p class="text-white mb-4">We use the unix time-stamps to find the 10 min time-bins each data point belongs to(index of the 10min time interval to which that data point belongs)</p>
@@ -83,13 +83,13 @@
 		<p class="text-white mb-4">In our time-series data plot, there will be some 10-min bins where there are no pickups. And its not useful to predict zero pickups for a data point and moreover these points will create a problem in Moving Averages(using ratios). Thus, we smooth our training data(2015)(as in smoothing we are looking at future values) and fill with zero our test data(2016)</p>
 
 		<h6 class="text-white mb-4">Fourier Transform:</h6>
-		<p class="text-white mb-4">From the Fourier transform plot of our time-series data we find the top amplitudes and corresponding frequencies</p>
+		<p class="text-white mb-4">From the Fourier transform plot of our time-series data, we find the top amplitudes and corresponding frequencies</p>
 	  
 	  
 	  
 	  
 	  
-	  <p class="text-white mb-4">We Generate batches of tensor image data with real-time data augmentation using ImageDataGenerator in keras.while generating we keep shear_range,zoom_range to 0.2, rescale it to 1./255 and horizontal flip to be true.The following is the code for data generation.</p>
+	  <p class="text-white mb-4">We Generate batches of tensor image data with real-time data augmentation using ImageDataGenerator in Keras.while generating we keep shear_range,zoom_range to 0.2, rescale it to 1./255 and horizontal flip to be true.The following is the code for data generation.</p>
 		  <h6 class="text-white mb-4">Applying Machine Learning models
 					<table style="width:100%">
 		<tr>
