@@ -62,7 +62,7 @@
     </div>
           <h2 class="text-white mb-4">Severstal Steel Defect Detection</h2>
 		  <h3 class="text-white mb-4">Introduction</h3>
-          <p class="text-white mb-4">Severstal is leading the charge in efficient steel mining and production. They believe the future of metallurgy requires development across the economic, ecological, and social aspects of the industry—and they take corporate responsibility seriously. The company recently created the country’s largest industrial data lake, with petabytes of data that were previously discarded. Severstal is now looking to machine learning to improve automation, increase efficiency, and maintain high quality in their production. The production process of flat sheet steel is especially delicate. From heating and rolling, to drying and cutting, several machines touch flat steel by the time it’s ready to ship. Today, Severstal uses images from high frequency cameras to power a defect detection algorithm.</p>
+          <p class="text-white mb-4">Severstal is leading the charge inefficient steel mining and production. They believe the future of metallurgy requires development across the economic, ecological, and social aspects of the industry—and they take corporate responsibility seriously. The company recently created the country’s largest industrial data lake, with petabytes of data that were previously discarded. Severstal is now looking to machine learning to improve automation, increase efficiency, and maintain high quality in their production. The production process of flat sheet steel is especially delicate. From heating and rolling, to drying and cutting, several machines touch flat steel by the time it’s ready to ship. Today, Severstal uses images from high-frequency cameras to power a defect detection algorithm.</p>
 		  <h3 class="text-white mb-4">Problem Statement</h3>
 		  <p class="text-white mb-4">This competition is a two-fold competition: classify the type of steel defect, and also segment the parts of the image that contain the defect.</p>
 		  <h6 class="text-white mb-4">Metrics <ol>
@@ -92,33 +92,33 @@
 		  <p class="text-white mb-4"></p>
 		  <h6 class="text-white mb-4">Data preparation
 		   <ol>
-	  <li>Check run length encoding and run length decoding</li>
+	  <li>Check run-length encoding and run-length decoding</li>
 	  <li>gamma correction
-	  <p>Gamma correction is a very common operation in traditional image processing. Since human visual system is non-linear response to visible light, so the ISP on phone or digital camera will perform gamma correction to produce better contrast for human visual system. Anyway, it is a image enhancement techique.</p>
+	  <p>Gamma correction is a very common operation in traditional image processing. Since the human visual system is non-linear response to visible light, so the ISP on phone or digital camera will perform gamma correction to produce better contrast for human visual system. Anyway, it is an image enhancement technique.</p>
 	  </li>
 	  <li>
 	  Contrast Limited Adaptive Histogram Equalization(CLAHE)
-	  <p>This is also a contrast enhancement techique, it is very similar to regular histogram equalization. But it is doing the effect on small blocks, which can avoid over-brightness in regular histogram equalization.</p>
+	  <p>This is also a contrast enhancement technique, it is very similar to regular histogram equalization. But it is doing the effect on small blocks, which can avoid over-brightness in regular histogram equalization.</p>
 	  </li>
 	  </ol>
 		  </h6>
 		  <p class="text-white mb-4"></p>
 		  <h6 class="text-white mb-4">Model
 		<h6 class="text-white mb-4">Build the SEUNet</h6>
-	   <p class="text-white mb-4">Squeeze-and-Excitiation Networks can be divide in two parts, squeeze and excitation parts.</br>
+	   <p class="text-white mb-4">Squeeze-and-Excitation Networks can be divided into two parts, squeeze and excitation parts.</br>
 		In very simple explanation, it aggregates feature maps across their spatial dimension and makes them as channel descriptor.</br>
-		And it can learn the importance of dependencies of each channels during training.</br>
+		And it can learn the importance of dependencies of each channel during training.</br>
 		Then multiply the weights to its corresponding channels of input tensor to enhance/decrease the importance.
-	   <h6 class="text-white mb-4">Loss fucntion</h6>
+	   <h6 class="text-white mb-4">Loss function</h6>
 	   <p class="text-white mb-4">
 	   The main idea of using Combo loss is very simple:</br>
 
 		Tversky Loss and weighted bce -> reduce the false positive</br>
-		Focal Loss -> Learn hard samples in training set.
+		Focal Loss -> Learn hard samples in the training set.
 	   </p>
 		<h5 class="text-white mb-4">Conclusion</h5>
 		<ol class="text-white mb-4">
-		<li>classified the type of steel defect,segmented the parts of the image that contain the defect and achieved Dice coefficient score of  0.84</li>
+		<li>classified the type of steel defect, segmented the parts of the image that contain the defect and achieved Dice coefficient score of  0.84</li>
 		</ol>
 		  </h6>
 		  
